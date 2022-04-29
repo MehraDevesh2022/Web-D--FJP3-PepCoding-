@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Say Hello</button>
+
+    
+
+    <script>
+     //Q1 on Clicking the Button append hello to the page
+      // qS --> this method used to identify to the elements from the element
+      
+      let btn =  document.querySelector('button');
+    // addEventListener is the method handle some action like mouse click , keypress etc
+    btn.addEventListener('click', function(e){
+        // creatElement lets you create element in a DOM
+        let divElm = document.createElement('div');
+        // inner text is a property by you can access text inside the element
+        divElm.innerText = "Hello"
+        
+        let body = document.querySelector('body');
+        // this methods allows you add new Children inside your selected element
+        body.appendChild(divElm);
+
+    })
+
+   
+    </script>  
+  </body>
+</html>
+
+
