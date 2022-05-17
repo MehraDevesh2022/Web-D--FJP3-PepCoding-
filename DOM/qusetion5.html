@@ -26,20 +26,18 @@
       //the cell jail should be drawn over it and it should be removed once it 
       //leaves(Hint: Use a background-image to set jail)
 
-        //mouseover
-      let img  = document.querySelector(".cell");
-      img.addEventListener("mouseover" , function(e){
-          img.style.background = 'url(./jail.jpg)'
 
-       
-      })
-      // mouse out
-      img.addEventListener("mouseout" , function(e){
-          img.style.background = 'none'
+      let cell = document.querySelector('.cell')
 
-       
+      cell.addEventListener('mouseover' , function(){
+        cell.style.background = 'url(./jail.jpg)'
       })
-     
+
+      //mouseout
+      
+     cell.addEventListener('mouseout' , function(e){
+       cell.style.background ='none'
+     })
 
 
 
