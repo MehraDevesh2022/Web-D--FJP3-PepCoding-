@@ -31,35 +31,34 @@
       // also it should only allow to type if the shift in pressed down.
 
       //   Solution :
-      let input = document.querySelector("#pass");
+      let input = document.querySelector("input");
       let text = document.querySelector("p");
-      let isShift = true;
-      input.addEventListener("keypress", function (event) {
+      let isShift =false ;
+      input.addEventListener("keypress", function (e) {
         if (event.getModifierState("CapsLock")) {
           text.style.display = "block";
-          event.preventDefault(); // selected event prevented using this tag eg. for input --> no text allowd
+          e.preventDefault();
         } else {
           text.style.display = "none";
         }
-        if(!isShift){
-          event.preventDefault();
+        if(isShift == false){
+          e.preventDefault();
         }
-      });
-   
-      document.addEventListener('keydown', function(event){
-     if(event.key == 'Shift'){
-       isShift =true
-     }
-   });
-   
-      document.addEventListener('keyup' , function(event){
-       if(event.key == 'Shift'){
-         isShift = false
-      }
-   });
-   
- 
 
+      });
+
+      
+      document.addEventListener('keydown' , function(e){
+        if(e.key == 'Shift'){
+            isShift = true;
+        }
+      })
+
+      document.addEventListener('keyup' , function(e){
+        if(e.key == 'Shift'){
+          isShift = false
+        }
+      })
     </script>
   </body>
 </html>
